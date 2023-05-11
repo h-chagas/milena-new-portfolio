@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import profile from "../../public/milena-profile.png";
+import profile from "../../public/assets/images/milena-profile.png";
 
 const ProfileInfo = () => {
   return (
