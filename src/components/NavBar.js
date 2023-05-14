@@ -4,6 +4,7 @@ import React, { useState } from "react";
 
 function NavBar() {
   const [navbar, setNavbar] = useState(false);
+  // console.log("this is darkmode ----->", darkMode);
   return (
     <div>
       <nav className="w-full bg-gray-200 fixed top-0 left-0 right-0 z-10">

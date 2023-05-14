@@ -6,13 +6,14 @@ import {
     AiFillFacebook,
   } from "react-icons/ai";
 
-const Footer = () => {
+const Footer = ({darkMode}) => {
+  
   return (
-    <footer id="footer" className='bg-neutral-400 text-white text-center -mx-10 sticky top-[100vh]'>
+    <footer id="footer"  className={`bg-neutral-400 ${darkMode ? 'dark:bg-gray-800' : ''} text-white text-center -mx-10 sticky top-[100vh]`}>
         
       <div className='py-8'>
-        <ul className='items-center justify-center'>
-          <li className='py-2'>
+        <ul className='items-center justify-center sm:text-xl'>
+          <li className='py-2 sm:py-3 md:py-4 lg:py-5'>
             <Link href="/">
               Home
             </Link>
@@ -45,7 +46,7 @@ const Footer = () => {
         </ul>
       </div>
 
-      <p className='py-2 text-sm'>
+      <p className='py-2 text-sm sm:text-md md:text-lg lg:text-xl'>
         &copy; Milena Flores | All rights reserved
       </p>
 
@@ -70,9 +71,8 @@ const Footer = () => {
         </Link>
       </div>
       
-      <p className='mt-6 text-xs'>
+      <p className='mt-6 text-xs sm:text-md md:text-lg lg:text-xl'>
         Designed and developed by <br />
-        <i class="fa-brands fa-github"></i>
         <a href="https://github.com/h-chagas">Hugo Chagas</a>
       </p>
     </footer>
