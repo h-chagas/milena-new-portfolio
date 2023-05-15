@@ -29,7 +29,7 @@ const Footer = ({darkMode}) => {
             </Link>
           </li>
           <li className='py-2'>
-            <Link href="#pricingScroll">
+            <Link href="/pricing">
                 Pricing
             </Link>
           </li>
