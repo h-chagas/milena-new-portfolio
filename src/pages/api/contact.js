@@ -6,6 +6,7 @@ const CONTACT_MESSAGE_FIELDS = {
   name: "Name",
   email: "Email",
   tel: "Telephone number",
+  location: "Location",
   postcode: "Postcode",
   treatType: "Type of treatment",
   message: "Message",
@@ -167,11 +168,15 @@ const generateEmailContent = (data) => {
 const handler = async (req, res) => {
   if (req.method === "POST") {
     const data = req.body;
+    // Check if postcode field exists, if not, provide a default value
+    if (!data.postcode) {
+      data.postcode = ""; // or provide any default value you want
+    }
     if (
       !data.name ||
       !data.email ||
       !data.tel ||
-      !data.postcode ||
+      !data.location ||
       !data.treatType ||
       !data.message
     ) {
