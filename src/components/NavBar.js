@@ -70,6 +70,11 @@ function NavBar() {
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-black py-4 px-6 text-center border-b-2 md:border-b-0  hover:bg-[#b3b3b3]  border-[#b3b3b3]  md:hover:text-[#b3b3b3] md:hover:bg-transparent">
+                  <Link href="/treatment_room" onClick={() => setNavbar(!navbar)}>
+                    Treatment Room
+                  </Link>
+                </li>
+                <li className="pb-6 text-xl text-black py-4 px-6 text-center border-b-2 md:border-b-0  hover:bg-[#b3b3b3]  border-[#b3b3b3]  md:hover:text-[#b3b3b3] md:hover:bg-transparent">
                   <Link href="/contact" onClick={() => setNavbar(!navbar)}>
                     Contact
                   </Link>
