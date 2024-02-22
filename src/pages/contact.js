@@ -22,6 +22,7 @@ const initValues = {
   name: "",
   email: "",
   tel: "",
+  location: "",
   postcode: "",
   treatType: "",
   message: "",
@@ -70,6 +71,17 @@ export default function Contact() {
     }
   };
 
+  const options = [
+    "Swedish Relaxing Massage",
+    "Deep Tissue Massage",
+    "Sports Massage",
+    "Cupping Therapy",
+    "Pregnancy Massage",
+    "Electrotherapy",
+    "Chair Massage",
+    "Beauty Facial Express",
+  ];
+
   return (
     <section className="flex flex-col min-h-screen px-10">
       <NavBar />
@@ -90,6 +102,10 @@ export default function Contact() {
             located on the bottom of the page
           </p>
 
+
+
+
+
           <FormControl
             isRequired
             isInvalid={touched.name && !values.name}
@@ -108,6 +124,10 @@ export default function Contact() {
             <FormErrorMessage>Required</FormErrorMessage>
           </FormControl>
 
+
+
+
+
           <FormControl
             isRequired
             isInvalid={touched.email && !values.email}
@@ -125,6 +145,11 @@ export default function Contact() {
             <FormErrorMessage>Required</FormErrorMessage>
           </FormControl>
 
+
+
+
+
+
           <FormControl isRequired isInvalid={touched.tel && !values.tel} mb={5}>
             <FormLabel>Telephone number</FormLabel>
             <Input
@@ -138,24 +163,57 @@ export default function Contact() {
             <FormErrorMessage>Required</FormErrorMessage>
           </FormControl>
 
-          <FormControl
-            isRequired
-            isInvalid={touched.postcode && !values.postcode}
-            mb={5}
-          >
-            <FormLabel>Postcode</FormLabel>
-            <Input
-              type="text"
-              name="postcode"
-              value={values.postcode}
+
+
+
+
+
+          <FormControl isRequired isInvalid={touched.location && !values.location} mb={5}>
+            <FormLabel>Location</FormLabel>
+            <Select
+              name="location"
+              value={values.location}
               onChange={handleChange}
               onBlur={onBlur}
-              placeholder="M10 7KZ"
-            />
-            <FormErrorMessage>Required</FormErrorMessage>
+              placeholder="Select location"
+            >
+              <option value="Home Mobile Massage">Home Mobile Massage</option>
+              <option value="Treatment Room at OL10 Heywood">
+                Treatment Room at OL10 Heywood
+              </option>
+            </Select>
           </FormControl>
 
-          <FormControl
+
+        
+
+
+
+
+
+          {values.location === "Home Mobile Massage" && (
+        <FormControl 
+        isRequired={values.location === "Home Mobile Massage"}
+        isInvalid={touched.postcode && !values.postcode} 
+        mb={5}>
+          <FormLabel>Postcode</FormLabel>
+          <Input
+            type="text"
+            name="postcode"
+            value={values.postcode}
+            onChange={handleChange}
+            onBlur={onBlur}
+            placeholder="M10 7KZ"
+          />
+          <FormErrorMessage>Required</FormErrorMessage>
+        </FormControl>
+      )}
+
+
+
+
+
+          {/* <FormControl
             isRequired
             isInvalid={touched.treatType && !values.treatType}
             mb={5}
@@ -170,7 +228,34 @@ export default function Contact() {
               placeholder="E.g. Sports Massage"
             />
             <FormErrorMessage>Required</FormErrorMessage>
+          </FormControl> */}
+
+          <FormControl
+            isRequired
+            isInvalid={touched.treatType && !values.treatType}
+            mb={5}
+          >
+            <FormLabel>Treatment type</FormLabel>
+            <Select
+              name="treatType"
+              value={values.treatType}
+              onChange={handleChange}
+              onBlur={onBlur}
+              placeholder="Select treatment type"
+            >
+              {options.map((option, index) => (
+                <option key={index} value={option}>
+                  {option}
+                </option>
+              ))}
+            </Select>
+            <FormErrorMessage>Required</FormErrorMessage>
           </FormControl>
+
+
+
+
+
 
           <FormControl
             isRequired
@@ -190,6 +275,10 @@ export default function Contact() {
             <FormErrorMessage>Required</FormErrorMessage>
           </FormControl>
 
+
+
+
+
           <Button
             variant="outline"
             colorScheme="green"
@@ -198,6 +287,7 @@ export default function Contact() {
               !values.name ||
               !values.email ||
               !values.tel ||
+              !values.location ||
               !values.postcode ||
               !values.treatType ||
               !values.message
@@ -211,13 +301,25 @@ export default function Contact() {
             Alternative ways to contact me
           </p>
           <div className="text-4xl flex justify-center gap-16 py-8 text-gray-600">
-            <Link href="sms:+447478883335" target="_blank" className="hover:bg-gray-200">
+            <Link
+              href="sms:+447478883335"
+              target="_blank"
+              className="hover:bg-gray-200"
+            >
               <MdOutlineTextsms />
             </Link>
-            <Link href="https://wa.me/447478883335" target="_blank" className="hover:bg-gray-200">
+            <Link
+              href="https://wa.me/447478883335"
+              target="_blank"
+              className="hover:bg-gray-200"
+            >
               <MdWhatsapp />
             </Link>
-            <Link href="tel:747-888-3335" target="_blank" className="hover:bg-gray-200">
+            <Link
+              href="tel:747-888-3335"
+              target="_blank"
+              className="hover:bg-gray-200"
+            >
               <MdCall />
             </Link>
           </div>
