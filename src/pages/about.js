@@ -38,7 +38,7 @@ const About = () => {
             About me
           </h2>
           <p className="py-2 sm:text-xl sm:py-4 lg:text-2xl lg:py-6">
-            My name is Milena Flores and I have been massage therapist for 6
+            My name is Milena Flores and I have been massage therapist for 8
             years. I am passionate about massage and the benefits that it
             brings, improving health and wellbeing for all my clients.
           </p>
@@ -49,13 +49,16 @@ const About = () => {
             massages in London, Birminghan and in Greater Manchester.
           </p>
           <p className="py-2 sm:text-xl sm:py-4 lg:text-2xl lg:py-6">
-            As a self-motivated learner, I am currently studying Level 5 Sports
-            Massage to keep improving my techniques and to find out new ones -
+            As a self-motivated learner and graduated in Level 5 Sports
+            Massage, I keep improving my techniques and to find out new ones -
             to always offer the best personalised treatment.
           </p>
           <p className="py-2 sm:text-xl sm:py-4 lg:text-2xl lg:py-6">
             As mobile therapist, my clients get treated in the comfort of their
             home!
+          </p>
+          <p className="py-2 sm:text-xl sm:py-4 lg:text-2xl lg:py-6">
+          <span style={{color: 'red'}}>NEW:</span> I am proud to announce that I now have my treatment room in Heywood-OL10.
           </p>
         </div>
 
