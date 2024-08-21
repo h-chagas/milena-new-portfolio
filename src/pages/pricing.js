@@ -32,7 +32,7 @@ const Pricing = () => {
                   <span className="text-lg -mt-3">Treatment room</span>
                 </div>
                   <div className="flex flex-col justify-center items-center my-2">
-                    <span className="mr-2 text-2xl font-extrabold">£ 55</span>
+                    <span className="mr-2 text-2xl font-extrabold">£ 60</span>
                     <span className="text-md -mt-1">Mobile treatment</span>
                   </div>
                 {/* <span className="text-gray-500 dark:text-gray-400">/month</span> */}
@@ -102,7 +102,7 @@ const Pricing = () => {
                   <span className="text-lg -mt-3">Treatment room</span>
                 </div>
                   <div className="flex flex-col justify-center items-center my-2">
-                    <span className="mr-2 text-2xl font-extrabold">£ 75</span>
+                    <span className="mr-2 text-2xl font-extrabold">£ 80</span>
                     <span className="text-md -mt-1">Mobile treatment</span>
                   </div>
                 {/* <span className="text-gray-500 dark:text-gray-400">/month</span> */}
