@@ -315,6 +315,7 @@ export default function Contact() {
             >
               <MdWhatsapp />
             </Link>
+            {/*
             <Link
               href="tel:747-888-3335"
               target="_blank"
@@ -322,6 +323,7 @@ export default function Contact() {
             >
               <MdCall />
             </Link>
+            */}
           </div>
         </div>
       </section>
