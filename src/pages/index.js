@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
@@ -10,11 +10,14 @@ import SubNavBar from "@/components/SubNavBar";
 import ProfileInfo from "@/components/ProfileInfo";
 import Footer from "@/components/Footer";
 import BookingBtn from "@/components/BookingBtn";
+import Modal from "@/components/Modal"; // Import the Modal component
 import { useState } from "react";
 
 const Home = () => {
 
   const [darkMode, setDarkMode] = useState(false);
+  const [showModal, setShowModal] = useState(true); // State to control modal visibility
+
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -55,6 +58,10 @@ const Home = () => {
 
         <HomeIcons />
         <Footer darkMode={darkMode}/>
+
+        {/* Modal Component */}
+        <Modal showModal={showModal} setShowModal={setShowModal} />
+
       </main>
     </div>
   );
