@@ -10,7 +10,7 @@ import SubNavBar from "@/components/SubNavBar";
 import ProfileInfo from "@/components/ProfileInfo";
 import Footer from "@/components/Footer";
 import BookingBtn from "@/components/BookingBtn";
-import Modal from "@/components/Modal"; // Import the Modal component
+import Modal from "@/components/Modal2025"; // Import the Modal component
 
 const Home = () => {
 
