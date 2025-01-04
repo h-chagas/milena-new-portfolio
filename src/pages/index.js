@@ -11,7 +11,6 @@ import ProfileInfo from "@/components/ProfileInfo";
 import Footer from "@/components/Footer";
 import BookingBtn from "@/components/BookingBtn";
 import Modal from "@/components/Modal"; // Import the Modal component
-import { useState } from "react";
 
 const Home = () => {
 
